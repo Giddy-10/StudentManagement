@@ -23,6 +23,7 @@ public class Professor extends Staff {
         return this.departmentID;
     }
     
+    // methods
     @Override
     public void giveDetails() {
         String divider = "-----------------------------------";

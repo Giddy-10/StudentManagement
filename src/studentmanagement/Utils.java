@@ -153,4 +153,83 @@ public class Utils {
         System.out.println("\nCourse assigned");
         System.out.println("Course: " + selectedCourse.getName());
     }
+    
+    private static boolean isIDPresent(List<Course> courses, int id) {
+        return courses.stream().anyMatch(c -> c.getId() == id);
+    }
+    
+    public static Admin createAdmin(Scanner scanner) {
+        System.out.print("Name: ");
+        String adminName = scanner.nextLine();
+        System.out.print("Staff ID: ");
+        int staffID = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println();
+        Admin newAdmin = new Admin(adminName, staffID);
+        return newAdmin;
+    }
+    
+    public static void addCourses(Admin admin, Scanner scanner) {
+        List<Course> allCourses = Data.all_courses;
+        final int max_courses = 3;
+        int coursesAdded = 0;
+        
+        while (coursesAdded < max_courses) {
+            if (coursesAdded > 0) {
+                System.out.print("Add another course? (y/n): ");
+                String choice = scanner.nextLine().trim().toLowerCase();
+                if (!choice.equals("y")) {
+                    break;
+                }
+            }
+            
+            System.out.println("\nAdd course");
+            int newID = 0;
+            while (newID == 0) {
+                System.out.print("Enter course ID (1000-9999): ");
+                int potentialID = scanner.nextInt();
+                scanner.nextLine();
+                if (potentialID < 1000 || potentialID > 9999) {
+                    System.out.println("Enter valid ID\n");
+                } else if(isIDPresent(allCourses, potentialID)) {
+                    System.out.println("Id " + potentialID + " is already taken");
+                } else {
+                    newID = potentialID;
+                }
+            }
+            String newName;
+            while (true) {
+                System.out.print("Course name: ");
+                newName = scanner.nextLine().trim();
+                if (!newName.isEmpty()) break;
+            }
+            int depID = 0;
+            while (depID == 0) {
+                for (Department d: Data.departments) {
+                    System.out.println("ID: " + d.getId() + " Name: " + d.getName());
+                }
+                depID = scanner.nextInt();
+                scanner.nextLine();
+            }
+            
+            Course newCourse = new Course(newID, newName, depID);
+            allCourses.add(newCourse);
+            coursesAdded++;
+            
+            System.out.println("Added: " + newCourse.getName() + " Code: " + newCourse.getId() + "\n");
+        }
+        
+        System.out.println("Added " + coursesAdded + " course(s)\n");
+    }
+    
+    public static Finance createFinanceOfficer(Scanner scanner) {
+        System.out.print("Name: ");
+        String financeName = scanner.nextLine();
+        System.out.print("Staff ID: ");
+        int staffID = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println();
+        Finance newFinanceOfficer = new Finance(financeName, staffID);
+        return newFinanceOfficer;
+    }
 }

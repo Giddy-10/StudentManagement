@@ -5,8 +5,9 @@ public class Course {
     private final String name;
     private final int departmentID;
     private Professor professor;
+    private double fee;
 
-    // Constructors
+    // constructors
     public Course(int id, String name, int depIDNo) {
         this.id = id;
         this.name = name;
@@ -20,12 +21,16 @@ public class Course {
         this.professor = professor;
     }
     
-    // Setter
+    // setters
     public void setProfessor (Professor professor) {
         this.professor = professor;
     }
+    
+    public void setFee(double fee) {
+        this.fee = fee;
+    }
 
-    // Getters
+    // getters
     public int getId() {
         return this.id;
     }
@@ -40,5 +45,9 @@ public class Course {
 
     public Professor getProfessor() {
         return this.professor;
+    }
+    
+    public double getFee() {
+        return this.fee;
     }
 }

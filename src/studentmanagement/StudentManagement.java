@@ -26,9 +26,12 @@ public class StudentManagement {
             newProfessor.giveDetails();
             Utils.pickCourse(newProfessor, scanner);
         } else if (userType == 3) {
-            System.out.println("You are an admin");
+            Admin newAdmin = Utils.createAdmin(scanner);
+            newAdmin.giveDetails();
+            Utils.addCourses(newAdmin, scanner);
         } else {
-            System.out.println("You work in finance");
+            Finance newFinanceOfficer = Utils.createFinanceOfficer(scanner);
+            newFinanceOfficer.giveDetails();
         }
     }
     
