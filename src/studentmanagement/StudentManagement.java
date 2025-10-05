@@ -19,9 +19,12 @@ public class StudentManagement {
         System.out.println();
         if (userType == 1) {
             Student newStudent = Utils.createStudent(scanner);
+            Utils.enrollCourses(newStudent, scanner);
             newStudent.giveDetails();
         } else if (userType == 2) {
-            System.out.println("You are a professor");
+            Professor newProfessor = Utils.professorRegistration(scanner);
+            newProfessor.giveDetails();
+            Utils.pickCourse(newProfessor, scanner);
         } else if (userType == 3) {
             System.out.println("You are an admin");
         } else {

@@ -28,6 +28,10 @@ public class Professor extends Staff {
         String divider = "-----------------------------------";
         System.out.println(divider);
         System.out.println("Name:\t" + this.getName() + "\nID:\t" + this.getStaffID() + "\nDepartment:\t" + this.departmentID);
-        System.out.println(divider);
+        System.out.println(divider + "\n");
+    }
+    
+    public void printData() {
+        System.out.println(this.getStaffID() + ":\t" + this.getName());
     }
 }

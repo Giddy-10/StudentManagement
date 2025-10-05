@@ -5,10 +5,13 @@
         <group>
             <file>file:/C:/Users/wanji/OneDrive/Documents/NetBeansProjects/StudentManagement/src/studentmanagement/StudentManagement.java</file>
             <file>file:/C:/Users/wanji/OneDrive/Documents/NetBeansProjects/StudentManagement/src/studentmanagement/Utils.java</file>
+            <file>file:/C:/Users/wanji/OneDrive/Documents/NetBeansProjects/StudentManagement/src/studentmanagement/Data.java</file>
             <file>file:/C:/Users/wanji/OneDrive/Documents/NetBeansProjects/StudentManagement/src/studentmanagement/Person.java</file>
             <file>file:/C:/Users/wanji/OneDrive/Documents/NetBeansProjects/StudentManagement/src/studentmanagement/Student.java</file>
             <file>file:/C:/Users/wanji/OneDrive/Documents/NetBeansProjects/StudentManagement/src/studentmanagement/Staff.java</file>
             <file>file:/C:/Users/wanji/OneDrive/Documents/NetBeansProjects/StudentManagement/src/studentmanagement/Professor.java</file>
+            <file>file:/C:/Users/wanji/OneDrive/Documents/NetBeansProjects/StudentManagement/src/studentmanagement/Department.java</file>
+            <file>file:/C:/Users/wanji/OneDrive/Documents/NetBeansProjects/StudentManagement/src/studentmanagement/Course.java</file>
         </group>
     </open-files>
 </project-private>
