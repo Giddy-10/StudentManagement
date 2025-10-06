@@ -232,4 +232,25 @@ public class Utils {
         Finance newFinanceOfficer = new Finance(financeName, staffID);
         return newFinanceOfficer;
     }
+    
+    public static void addFees(Finance financeOfficer, Scanner scanner) {
+        System.out.println(financeOfficer.getName() + ", set fees to courses\n");
+        for (Course c: Data.all_courses) {
+            Department department = Data.departments.stream()
+                    .filter(d -> d.getId() == c.getDepartmentId())
+                    .findFirst()
+                    .orElse(null);
+            System.out.println("Name: \t" + c.getName() + "\nCode: \t" + c.getId() + "\nDepartment: \t" + department.getName());
+            double fee = 0;
+            while (fee < 100 || fee > 250) {
+                System.out.print("Enter fee ($100 - $250): ");
+                fee = scanner.nextDouble();
+                scanner.nextLine();
+                System.out.println();
+            }
+            c.setFee(fee);
+            System.out.println("Set to " + String.format("%.2f", fee) + "\n");
+        }
+        System.out.println("Completed\n");
+    }
 }

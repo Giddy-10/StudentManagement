@@ -32,6 +32,7 @@ public class StudentManagement {
         } else {
             Finance newFinanceOfficer = Utils.createFinanceOfficer(scanner);
             newFinanceOfficer.giveDetails();
+            Utils.addFees(newFinanceOfficer, scanner);
         }
     }
     
