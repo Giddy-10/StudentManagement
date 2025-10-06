@@ -1,5 +1,6 @@
 package studentmanagement;
 
+// inheritance
 public class Admin extends Staff {
     // constructor
     public Admin(String name, int IDNo) {
@@ -7,6 +8,7 @@ public class Admin extends Staff {
     }
     
     // methods
+    // polymorphism (overriding)
     @Override
     public void giveDetails() {
         String divider = "-----------------------------------";

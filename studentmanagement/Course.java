@@ -7,7 +7,7 @@ public class Course {
     private Professor professor;
     private double fee;
 
-    // constructors
+    // constructors (polymorphism - overloading)
     public Course(int id, String name, int depIDNo) {
         this.id = id;
         this.name = name;

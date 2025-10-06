@@ -3,6 +3,7 @@ package studentmanagement;
 import java.util.ArrayList;
 import java.util.List;
 
+// inheritance
 public class Student extends Person{
     private final int studentID;
     private final List<Course> enrolledCourses;

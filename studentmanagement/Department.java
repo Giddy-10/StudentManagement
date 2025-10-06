@@ -19,6 +19,7 @@ public class Department {
         return this.name;
     }
     
+    // method
     public void printData() {
         System.out.println(this.id + ":\t" + this.name);
     }

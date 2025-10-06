@@ -1,10 +1,13 @@
 package studentmanagement;
 
+// Inheritance
 public class Finance extends Staff {
     public Finance(String name, int IDNo) {
         super(name, IDNo);
     }
     
+    // methods
+    // polymorphism (overriding)
     @Override
     public void giveDetails() {
         String divider = "-----------------------------------";

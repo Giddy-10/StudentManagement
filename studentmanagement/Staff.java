@@ -1,5 +1,6 @@
 package studentmanagement;
 
+// inheritance
 public class Staff extends Person {
     private final int staffID;
     

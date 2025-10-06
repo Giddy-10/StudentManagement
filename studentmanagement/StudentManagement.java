@@ -18,19 +18,19 @@ public class StudentManagement {
         }
         System.out.println();
         if (userType == 1) {
-            Student newStudent = Utils.createStudent(scanner);
+            Student newStudent = UtilsRegistration.createStudent(scanner);
             Utils.enrollCourses(newStudent, scanner);
             newStudent.giveDetails();
         } else if (userType == 2) {
-            Professor newProfessor = Utils.professorRegistration(scanner);
+            Professor newProfessor = UtilsRegistration.professorRegistration(scanner);
             newProfessor.giveDetails();
             Utils.pickCourse(newProfessor, scanner);
         } else if (userType == 3) {
-            Admin newAdmin = Utils.createAdmin(scanner);
+            Admin newAdmin = UtilsRegistration.createAdmin(scanner);
             newAdmin.giveDetails();
             Utils.addCourses(newAdmin, scanner);
         } else {
-            Finance newFinanceOfficer = Utils.createFinanceOfficer(scanner);
+            Finance newFinanceOfficer = UtilsRegistration.createFinanceOfficer(scanner);
             newFinanceOfficer.giveDetails();
             Utils.addFees(newFinanceOfficer, scanner);
         }

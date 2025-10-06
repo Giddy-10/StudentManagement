@@ -1,5 +1,6 @@
 package studentmanagement;
 
+// abstract class
 public abstract class Person {
     private final String name;
     
