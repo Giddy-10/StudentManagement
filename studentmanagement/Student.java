@@ -28,6 +28,7 @@ public class Student extends Person{
         this.enrolledCourses.add(course);
     }
     
+    @Override
     public void giveDetails() {
         String divider = "-----------------------------------";
         System.out.println(divider);

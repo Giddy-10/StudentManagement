@@ -1,6 +1,6 @@
 package studentmanagement;
 
-public class Person {
+public abstract class Person {
     private final String name;
     
     // constructor
@@ -16,4 +16,6 @@ public class Person {
     public void giveName(){
         System.out.println("Your name is: " + name);
     }
+    
+    public abstract void giveDetails();
 }

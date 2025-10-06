@@ -14,6 +14,7 @@ public class Staff extends Person {
         return this.staffID;
     }
     
+    @Override
     public void giveDetails() {
         String divider = "-----------------------------------";
         System.out.println(divider);
